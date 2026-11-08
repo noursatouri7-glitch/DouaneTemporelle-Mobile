@@ -7,4 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".VerificationActivity">
 
+    <LinearLayout
+        android:id="@+id/layoutPasseport"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/	layoutPhoto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageEmbleme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/embleme_temporel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInformations"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textNomVoyageur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom : Voyageur inconnu"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
