@@ -1,0 +1,5 @@
+<resources>
+    <string name="result_msg_approuve">Bon voyage %1$s</string>
+    <string name="result_msg_refuse">%1$s est en état d\'arrestation temporelle</string>
+    <string name="result_btn_nouveau">Nouveau voyageur</string>
+</resources>

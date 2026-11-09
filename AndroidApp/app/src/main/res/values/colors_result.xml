@@ -1,0 +1,5 @@
+<resources>
+    <color name="result_blanc">#FFFFFFFF</color>
+    <color name="result_vert">#FF2E7D32</color>
+    <color name="result_rouge">#FFC62828</color>
+</resources>
