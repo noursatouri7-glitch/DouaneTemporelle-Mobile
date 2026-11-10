@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#081B33"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,93 +8,127 @@
     android:layout_height="match_parent"
     tools:context=".VerificationActivity">
 
+    <TextView
+        android:id="@+id/textTitre_ns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="DOUANE TEMPORELLE"
+        android:textColor="#D4AF37"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/layoutPasseport"
         android:layout_width="0dp"
         android:layout_height="220dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/fond_passeport_ns"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textTitre_ns"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/	layoutPhoto"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/imageEmbleme_ns"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageEmbleme"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/embleme_temporel" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutInformations"
+            android:scaleType="centerInside"
+            android:contentDescription="Emblème temporel"
+            app:srcCompat="@drawable/photo_voyageur_ns" />
+        <RelativeLayout
+            android:id="@+id/layoutInformations_ns"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
-            android:orientation="vertical">
+            android:layout_weight="0.7">
 
             <TextView
-                android:id="@+id/textNomVoyageur"
+                android:id="@+id/textPasseport_ns"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PASSEPORT TEMPOREL"
+                android:textColor="#D4AF37"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ligneDoree_ns"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/textPasseport_ns"
+                android:layout_marginTop="8dp"
+                android:background="#D4AF37" />
+
+            <TextView
+                android:id="@+id/textNomVoyageur_ns"
+                android:layout_below="@id/ligneDoree_ns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:text="Nom : Voyageur inconnu"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textAgeTemporel"
+                android:id="@+id/textAgeTemporel_ns"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/textNomVoyageur_ns"
+                android:layout_marginTop="18dp"
                 android:text="Âge temporel : -- ans"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textMotif"
+                android:id="@+id/textMotif_ns"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/textAgeTemporel_ns"
+                android:layout_marginTop="18dp"
                 android:text="Motif : Non renseigné"
-                android:textSize="20sp" />
-        </LinearLayout>
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layoutBoutons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal"
         android:padding="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPasseport"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintEnd_toEndOf="parent">
         <Button
-            android:id="@+id/btnApprouver"
+            android:id="@+id/btnApprouver_ns"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:backgroundTint="	#6750A4"
+            android:backgroundTint="#F2C94C"
             android:text="Approuver"
-            android:textColorLink="	#FFFFFF"
+            android:textColor="#081B33"
             tools:layout_editor_absoluteX="62dp"
             tools:layout_editor_absoluteY="322dp" />
 
         <Button
-            android:id="@+id/btnRefuser"
+            android:id="@+id/btnRefuser_ns"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:backgroundTint="	#D32F2F"
+            android:backgroundTint="#244D7D"
             android:text="Refuser"
             android:textColor="	#FFFFFF"
             android:textSize="16sp" />

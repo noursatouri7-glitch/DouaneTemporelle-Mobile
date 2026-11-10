@@ -24,12 +24,12 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState); // nafichiw l interface li bel xml kol variable talk9a l element mte3ha bel id
         WindowCompat.enableEdgeToEdge(getWindow());
         setContentView(R.layout.activity_verification);
-        textNomVoyageur = findViewById(R.id.textNomVoyageur);
-        textAgeTemporel = findViewById(R.id.textAgeTemporel);
-        textMotif = findViewById(R.id.textMotif);
+        textNomVoyageur = findViewById(R.id.textNomVoyageur_ns);
+        textAgeTemporel = findViewById(R.id.textAgeTemporel_ns);
+        textMotif = findViewById(R.id.textMotif_ns);
 
-        btnApprouver = findViewById(R.id.btnApprouver);
-        btnRefuser = findViewById(R.id.btnRefuser);
+        btnApprouver = findViewById(R.id.btnApprouver_ns);
+        btnRefuser = findViewById(R.id.btnRefuser_ns);
         //les informations mta3 el voyageur li tba3thouna mel page saisie activity
         String nom = getIntent().getStringExtra("nom");
         int anneeNaissance = getIntent().getIntExtra("anneeNaissance", 0);
