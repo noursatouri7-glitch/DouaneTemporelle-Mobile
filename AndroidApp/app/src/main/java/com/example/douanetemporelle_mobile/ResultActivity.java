@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -27,5 +28,16 @@ public class ResultActivity extends AppCompatActivity {
         // n9raw el verdict (boolean) w el esm b el clés mta3 CleExtra
         boolean approuve = intent.getBooleanExtra(CleExtra.cleVerdict(CleExtra.MATRICULE), false);
         String nom = intent.getStringExtra(CleExtra.cleNom(CleExtra.MATRICULE));
+
+        // el fond w el message yetbaddlou 7asb el verdict
+        if (approuve) {
+            // approuvé => fond vert + "Bon voyage [Nom]"
+            racine.setBackgroundColor(ContextCompat.getColor(this, R.color.result_vert));
+            tvMessage.setText(getString(R.string.result_msg_approuve, nom));
+        } else {
+            // refusé => fond rouge + "[Nom] est en état d'arrestation temporelle"
+            racine.setBackgroundColor(ContextCompat.getColor(this, R.color.result_rouge));
+            tvMessage.setText(getString(R.string.result_msg_refuse, nom));
+        }
     }
 }
