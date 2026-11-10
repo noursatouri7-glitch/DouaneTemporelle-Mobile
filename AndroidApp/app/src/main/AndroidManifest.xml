@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- nsajlou el activité el thenya (el verdict) fil manifest -->
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
         <activity
             android:name=".VerificationActivity"
             android:exported="false"
