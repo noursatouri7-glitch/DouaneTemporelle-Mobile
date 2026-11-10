@@ -24,7 +24,7 @@
         <!-- nsajlou el activité el thenya (el verdict) fil manifest -->
         <activity
             android:name=".ResultActivity"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>

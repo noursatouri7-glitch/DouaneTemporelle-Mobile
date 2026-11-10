@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_racine_xx"
+    android:id="@+id/layout_racine_gj"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +9,7 @@
     android:fitsSystemWindows="true">
 
     <TextView
-        android:id="@+id/tv_message_xx"
+        android:id="@+id/tv_message_gj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -18,7 +18,7 @@
         android:textColor="@color/result_blanc" />
 
     <Button
-        android:id="@+id/btn_nouveau_xx"
+        android:id="@+id/btn_nouveau_gj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
