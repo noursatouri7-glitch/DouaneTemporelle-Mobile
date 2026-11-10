@@ -39,5 +39,13 @@ public class ResultActivity extends AppCompatActivity {
             racine.setBackgroundColor(ContextCompat.getColor(this, R.color.result_rouge));
             tvMessage.setText(getString(R.string.result_msg_refuse, nom));
         }
+
+        // "Nouveau voyageur": nrj3ou l MainActivity w nsakrou kol el activités el 9dom
+        btnNouveau.setOnClickListener(v -> {
+            Intent retour = new Intent(ResultActivity.this, MainActivity.class);
+            // CLEAR_TASK yfassakh el pile lkol, NEW_TASK ybda pile jdida
+            retour.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(retour);
+        });
     }
 }
