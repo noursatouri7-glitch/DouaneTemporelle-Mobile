@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DouaneTemporelle-Mobile</string>
+<!-- Liste des motifs de voyage (ne pas modifier le texte "Modification du passé") -->
+<string-array name="motifs_array">
+    <item>Tourisme</item>
+    <item>Modification du passé</item>
+    <item>Fuite</item>
+</string-array>
 </resources>
