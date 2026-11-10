@@ -1,95 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 1- حاوية قابلة للتمرير تحتوي على كامل الاستمارة -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0F2A"
-    android:fillViewport="true">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- 2- عنوان التطبيق -->
-        <TextView
-            android:id="@+id/tv_titre_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="DOUANE TEMPORELLE"
-            android:textColor="#FFB300"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
-
-        <!-- 3- حقل اسم المسافر -->
-        <EditText
-            android:id="@+id/et_nom_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:importantForAutofill="no"
-            android:hint="Nom du voyageur"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#9AA0B5"
-            android:layout_marginBottom="12dp" />
-
-        <!-- 4- حقل سنة الولادة -->
-        <EditText
-            android:id="@+id/et_naissance_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:importantForAutofill="no"
-            android:hint="Année de naissance (ex: 1990)"
-            android:inputType="number"
-            android:maxLength="4"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#9AA0B5"
-            android:layout_marginBottom="12dp" />
-
-        <!-- 5- حقل سنة الوجهة -->
-        <EditText
-            android:id="@+id/et_destination_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:importantForAutofill="no"
-            android:hint="Année de destination (ex: 2050)"
-            android:inputType="number"
-            android:maxLength="4"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#9AA0B5"
-            android:layout_marginBottom="12dp" />
-
-        <!-- 6- عنوان قائمة الدوافع -->
-        <TextView
-            android:id="@+id/tv_motif_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Motif du voyage"
-            android:textColor="#FFB300" />
-
-        <!-- 7- القائمة المنسدلة لاختيار دافع السفر -->
-        <Spinner
-            android:id="@+id/sp_motif_gg"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="#FFFFFF"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="24dp" />
-
-        <!-- 8- زر التفتيش اللي يفتح النشاط الثاني -->
-        <Button
-            android:id="@+id/btn_inspecter_gg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FF0000"
-            android:text="Inspecter le profil"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
