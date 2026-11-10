@@ -87,9 +87,9 @@
             android:id="@+id/btn_inspecter_gg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFB300"
+            android:backgroundTint="#FF0000"
             android:text="Inspecter le profil"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </ScrollView>
